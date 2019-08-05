@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>飞科商城--注册登陆页</title>
+		<link rel="stylesheet" href="css/iconfont.css">
+		<link rel="stylesheet" href="css/login.css">
+	</head>
+	<body>
+		<!-- header -->
+		<div class="mainheader">
+			<div class="header">
+				<div class="headerleft">
+					<a href="#">收藏</a>
+					<a href="#">微信<img class="wxin" src="img/mainimg/weixin.jpg" alt=""></a>
+				</div>
+				<div class="headerright">
+					<a href="login.html" target="_blank" class="login">登录</a>
+					<span>|</span>
+					<a href="reg.html" target="_blank" class="regs">注册</a>
+				</div>
+			</div>
+		</div>
+		<div class="searchHeader">
+			<div class="log">
+				<a href="#"><img src="img/mainimg/logo.gif" alt=""></a>
+				<a href="#"><span>首页</span></a>
+			</div>
+			<div class="search">
+					<form class="clearfix pr">
+						<input type="text" id='search_box'promptvalue="剃须刀" value="剃须刀" />
+						<div class="hot_words">
+							<a href="javascript:void(0)" class="in_b" onclick="return search_goods('/list_goods/search','剃须刀');">剃须刀</a>
+							<a href="javascript:void(0)" class="in_b" onclick="return search_goods('/list_goods/search','电吹风');">电吹风</a>
+						</div>
+					</form>
+				<a class="searchlogo" href="#"></a>
+				<a href="#" class="cart">
+					<span class="icon iconfont icon-gouwuche"></span>
+					<span class="catalt">购物车（<b>0</b>）</span>
+					<div class="connect"></div>
+					<div class="cartcontent">
+						<div class="cartinfo">
+							<p>共计<span>0</span>件商品</p>
+							<p>合计:<span>0</span>元</p>
+						</div>
+						<div class="columprice" href="">去购物车结算</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<!-- content -->
+		<div class="regnews">
+			<p>欢迎登录飞科商城</p>
+			<div id="regtitle">
+				<span class="userloginselect">注册用户登录</span>
+				<span class="phoneloginselect">手机动态验证码登录</span>
+			</div>
+			<div class="userlogin">
+				<form  action="loginCheck.php" method="post" >
+					<div class="userlogininfo">
+						<span><img src="img/icon/user-id.png"></span><input type="text" name="username" class="checksinput" placeholder="邮箱/手机">
+					</div>
+					<span class="checknews"></span>
+					<div class="userlogininfo">
+						<span><img src="img/icon/user-pwd.png"></span><input type="password" name="userpass" class="checksinput" maxlength="16" placeholder="密码"><br>
+					</div>
+					<span class="checknews"></span>
+					<input class="logins" type="submit" value="登录">
+				</form>
+			</div>
+			<div class="phonelogin" style="display:none">
+				<form  action="loginCheck.php" method="post" >
+					<div class="userlogininfo">
+						<span><img src="img/icon/user-code.png"></span>
+						<input type="text" class="checksinput" placeholder="请输入验证码">
+						<div class="checkpwd">
+							<span><img class="pwdimg"></span>
+							<span class="getpwd">换一张</span>
+						</div>
+					</div>
+					<span class="checknews"></span>
+					<div class="userlogininfo">
+						<span><img  src="img/icon/user-id.png"></span>
+						<input type="text" class="checksinput" placeholder="请输入手机号" name="username" maxlength="11" oninput="value=value.replace(/[^\d]/g,'')">
+					</div>
+					<span class="checknews"></span>
+					<div class="userlogininfo">
+						<span><img src="img/icon/user-mcode.png"></span>
+						<input type="text" class="checksinput" maxlength="6" name="userpass" placeholder="请输入手机验证码">
+						<a class="getautopwd">获取动态验证码</a>
+					</div>
+					<span class="checknews"></span>
+					<input class="logins" type="submit" value="登录">
+				</form>
+			</div>
+			<div class="addnew">
+				<input style="vertical-align: middle;margin-right:8px;" type="checkbox">两周内免登录
+				<span>|</span>
+				<a href="#">忘记密码？</a>
+				<span>还没有账号？</span>
+				<a href="reg.html" target="_blank" >立即注册</a>
+			</div>
+			<div class="loginmore">
+				<span class="line"></span>
+				<span>其他方式登录</span>
+				<span class="line"></span>
+			</div>	
+			<div class="connectimg">
+				<a href="#"></a>
+				<a href="#"></a>
+			</div>
+		</div>
+		<!-- info -->
+		<div class="footmain">
+			<div class="info">
+				<span>领导品牌&nbsp品质保证</span>
+				<span>7天退货&nbsp15天换货</span>
+				<span>全场免运费（部分配件除外）</span>
+				<span>全国网点&nbsp联保服务</span>
+			</div>
+			<!-- news -->
+			<div class="news">
+				<div class="newslist">
+					<h3>购物服务</h3>
+					<a href="#">购物指南</a>
+					<a href="#">配送方式</a>
+					<a href="#">支付方式</a>
+				</div>
+				<div class="newslist">
+					<h3>服务支持</h3>
+					<a href="#">售后网点</a>
+					<a href="#">积分规则</a>
+					<a href="#">保修政策</a>
+				</div>
+				<div class="newslist">
+					<h3>关注我们</h3>
+					<a href="#">新浪微博</a>
+					<a href="#">关注微信</a>
+					<a href="#">APP下载</a>
+				</div>
+				<div class="newslist">
+					<h3>关于飞科</h3>
+					<a href="#">飞科介绍</a>
+					<a href="#">飞科新闻</a>
+					<a href="#">联系我们</a>
+				</div>
+				<div class="ewm">
+					<img class="wxcode" src="img/mainimg/qr_code.jpg">
+					<p>关注飞科电器官方微信</p>
+				</div>
+				<img class="call" src="img/mainimg/service1.png">
+			</div>
+			<!-- footer -->
+			<div class="footer">
+				<img class="flogo" src="img/mainimg/minilogo.jpg">
+				<div class="text">
+					<span>Copyright&#169;2013-2016上海飞科电器股份有限公司<span> | </span>版权所有<span> | </span>
+						<a href="#">网站备案/许可证号：沪ICP备13041208号</a>
+						<a href="#">增值电信营业经营许可认证:沪B2-20160083</a><span>|</span>
+						<a href="#" class="lasttext">沪公网安备 31010502001341号</a>
+				</div>
+				<div class="parter">
+					<a href="#"><img src="img/mainimg/rightimg1.jpg"></a><span>|</span>
+					<a href="#"><img src="img/mainimg/rightimg2.jpg"></a><span>|</span>
+					<a href="#"><img src="img/mainimg/rightimg3.jpg"></a><span>|</span>
+					<a href="#"><img src="img/mainimg/rightimg4.jpg"></a>
+				</div>
+			</div>
+			<!-- //固定栏广告 -->
+			<div class="adbox">
+				<a href="#"><img src="img/mainimg/tglx.jpg" alt="团购客户请QQ联系" title="团购客户请QQ联系"></a>
+				<a href="#"><img src="img/mainimg/zxfw.jpg" ></a>
+			</div>
+					
+	</body>
+	</div>
+</html>
+<script>
+	window.onload=function(){
+		var rnd = Math.ceil(Math.random() * 6);
+		$(".pwdimg")[0].src = "img/icon/do_index" + rnd + ".gif";
+		
+		var regtitle = $("#regtitle").children;
+		regtitle[0].onclick=function(){
+			this.style.background = "#2264af";
+			regtitle[1].style.background = "#cccccc";
+			$(".userlogin")[0].style.display = "block";
+			$(".phonelogin")[0].style.display = "none";
+		}
+		regtitle[1].onclick=function(){
+			this.style.background = "#2264af";
+			regtitle[0].style.background = "#cccccc";
+			$(".userlogin")[0].style.display = "none";
+			$(".phonelogin")[0].style.display = "block";
+		}
+		
+		var arr = [3793, 8793, 7340,5550, 1733, 3128, 7191];
+		$(".getpwd")[0].onclick=function(){
+			rnd=Math.ceil(Math.random()*6);
+			$(".pwdimg")[0].src="img/icon/do_index"+rnd+".gif";
+		}
+		$(".pwdimg")[0].onclick=function(){
+			rnd=Math.ceil(Math.random()*6);
+			this.src="img/icon/do_index"+rnd+".gif";
+		}
+		
+		var inputs = $(".checksinput");
+		var ospan = $(".checknews");
+		//手机号
+		var flagphone = false;
+		inputs[0].onblur = function() {
+			var r = /^1[3-9]\d{9}$/;
+			if (r.test(this.value) == true) {
+				$(".getautopwd")[0].style.backgroundColor = "#0c82d9";
+				$(".getautopwd")[0].style.color = "#ffffff";
+				ospan[0].innerHTML = "";
+				flagphone = true;
+			} else {
+				$(".getautopwd")[0].style.backgroundColor = "";
+				ospan[0].innerHTML = "请正确填写您的手机号码";
+			}
+		}
+		// 密码
+		var flagpws = false;
+		inputs[1].onblur = function() {
+			var userpass = /^\w{6,16}$/;
+			if (userpass.test(this.value) == true) {
+				ospan[1].innerHTML = "";
+				flagpws = true;
+			} else {
+				ospan[1].innerHTML = "密码不能小于六位数";
+			}
+		}
+		
+		// 验证码
+		var flagcheckpwd = false;
+		inputs[2].onblur = function() {
+			console.log(rnd);
+			if (this.value == arr[rnd]) {
+				flagcheckpwd = true;
+				ospan[2].innerHTML = "";
+			} else {
+				ospan[2].innerHTML = "请输入正确的验证码";
+			}
+		}
+		//手机号
+		var flagphone = false;
+		inputs[3].onblur = function() {
+			var r = /^1[3-9]\d{9}$/;
+			if (r.test(this.value) == true) {
+				$(".getautopwd")[0].style.backgroundColor = "#0c82d9";
+				$(".getautopwd")[0].style.color = "#ffffff";
+				ospan[3].innerHTML = "";
+				flagphone = true;
+			} else {
+				$(".getautopwd")[0].style.backgroundColor = "";
+				ospan[3].innerHTML = "请正确填写您的手机号码";
+			}
+		}
+		//动态码
+		var autostr = "456123";
+		var flagautopwd = false;
+		inputs[4].onblur = function() {
+			if (this.value == autostr) {
+				flagautopwd = true;
+				ospan[4].innerHTML = "";
+			} else {
+				ospan[4].innerHTML = "请输入正确的验证码";
+			}
+		}
+		
+		function $(str) {
+			if (str.charAt(0) == "#") {
+				return document.getElementById(str.substring(1));
+			} else if (str.charAt(0) == ".") {
+				return document.getElementsByClassName(str.substring(1));
+			} else {
+				return document.getElementsByTagName(str);
+			}
+		}
+	}
+
+</script>
