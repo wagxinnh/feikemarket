@@ -28,10 +28,16 @@ gulp.task("watchall", async () => {
 			.pipe(gulp.dest('D:\\phpStudy\\WWW\\autofeikedisk\\font'));
 	});
 
-	gulp.watch('*.php', async () => {
-		gulp.src('*.php')
-			.pipe(gulp.dest('D:\\phpStudy\\WWW\\autofeikedisk'));
+	gulp.watch('php/**/*', async () => {
+		gulp.src('php/**/*')
+			.pipe(gulp.dest('D:\\phpStudy\\WWW\\autofeikedisk\\php'));
 	});
+	
+	gulp.watch('json/**/*', async () => {
+		gulp.src('json/**/*')
+			.pipe(gulp.dest('D:\\phpStudy\\WWW\\autofeikedisk\\json'));
+	});
+
 
 	gulp.watch('css/**/*', async () => {
 		gulp.src('css/**/*')

@@ -24,7 +24,7 @@
 		<div class="searchHeader">
 			<div class="log">
 				<a href="#"><img src="img/mainimg/logo.gif" alt=""></a>
-				<a href="#"><span>首页</span></a>
+				<a href="index.html"><span>首页</span></a>
 			</div>
 			<div class="search">
 					<form class="clearfix pr">
@@ -37,14 +37,14 @@
 				<a class="searchlogo" href="#"></a>
 				<a href="#" class="cart">
 					<span class="icon iconfont icon-gouwuche"></span>
-					<span class="catalt">购物车（<b>0</b>）</span>
+					<span class="catalt">购物车（<b class="typenums">0</b>）</span>
 					<div class="connect"></div>
 					<div class="cartcontent">
 						<div class="cartinfo">
-							<p>共计<span>0</span>件商品</p>
-							<p>合计:<span>0</span>元</p>
+							<p>共计<span class="totalsinglenum">0</span>件商品</p>
+							<p>合计:<span class="totalsinglepeice">0</span>元</p>
 						</div>
-						<div class="columprice" href="">去购物车结算</div>
+						<div class="columprice">去购物车结算</div>
 					</div>
 				</a>
 			</div>
@@ -53,10 +53,10 @@
 		<div class="shoppingcart">
 			<div class="shoppinginfo"></div>
 			<div class="shoptitle">
-				<table>
+				<table class="tabledoms">
 					<tr>
 						<th>
-							<input checked="checked" type="checkbox">
+							<input class="checkselect" checked="checked" type="checkbox">
 						</th>
 						<th>商品</th>
 						<th>单价</th>
@@ -65,22 +65,36 @@
 						<th>操作</th>
 					</tr>
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>	
+						<td>
+							<input checked="checked" type="checkbox">
+						</td>
+						<td class="goodsimgs">
+							<a href="#">
+								<img class="singlegoodsimg" width="120px" src="img/goodimg/FS375_000_01.jpg" alt="">
+							</a>
+							<span class="singlegoodsname"></span>
+						</td>
+						<td>￥<span class="singlegoodsprice">65</span>元</td>
+						<td class="addAndReduce">
+							<div>
+								<span class="goodsreduce">-</span>
+								<input class="goodsnum" type="text" value="1">
+								<span class="goodsadd">+</span>
+							</div>
+							
+						</td>
+						<td><span class="singletotalprice">0</span></td>
+						<td><span>删除</span></td>
 					</tr>
 				</table>
 				<h3>
-					<a href="">清空购物车</a>
-					<a href="">删除选中项</a>
+					<span>清空购物车</span>
+					<span>删除选中项</span>
 				</h3>
 				<div class="totalprice">
 					<div>
 						<span>商品总计:</span>
-						<strong>￥<b>0</b>元</strong>
+						<strong>￥<b class="totalpurgoodsprice">0</b>元</strong>
 					</div>
 				</div>
 				<div class="pay">
@@ -157,7 +171,37 @@
 	</div>
 </html>
 <script>
-	
+		window.onload=function(){
+			$(".columprice")[0].onclick=function(){
+				location.href="shoppingcart.html";
+			}
+			$(".goodsadd")[0].onclick = function() {
+				$(".goodsnum")[0].value++;
+				$(".typenums")[0].innerHTML = "1";
+				let totalprice = $(".singlegoodsprice")[0].innerHTML;
+				let totalnum = $(".goodsnum")[0].value;
+				$(".singletotalprice")[0].innerHTML = totalnum * totalprice;
+				$(".totalpurgoodsprice")[0].innerHTML=totalnum * totalprice;
+				$(".totalsinglenum")[0].innerHTML = totalnum;
+				$(".totalsinglepeice")[0].innerHTML = totalnum * totalprice;
+			}
+			
+			$(".goodsreduce")[0].onclick = function() {
+				$(".goodsnum")[0].value--;
+				if ($(".goodsnum")[0].value <= 0) {
+					$(".goodsnum")[0].value = 0;
+					$(".typenums")[0].innerHTML = "0";
+					$(".totalsinglenum")[0].innerHTML = totalnum;
+					$(".totalsinglepeice")[0].innerHTML = totalnum * totalprice;
+				}
+				let totalprice = $(".singlegoodsprice")[0].innerHTML;
+				let totalnum = $(".goodsnum")[0].value;
+				$(".singletotalprice")[0].innerHTML = totalnum * totalprice;
+				$(".totalpurgoodsprice")[0].innerHTML=totalnum * totalprice;
+			}
+			// getgoodcartnews();
+		}
+		
 		function $(str) {
 			if (str.charAt(0) == "#") {
 				return document.getElementById(str.substring(1));

@@ -288,44 +288,86 @@ body {
 	color: #9fa0a0;
 }
 .shoptitle th:nth-child(1){
-	width: 88px;
+	width: 24px;
 	height:40px;
 	background:#fafafa;
 }
 .shoptitle th:nth-child(2){
-	width: 393px;
+	width: 689px;
 	height:40px;
 	background:#fafafa;
+	text-indent:30px;
+	text-align: left;
 }
 .shoptitle th:nth-child(3){
-	width: 189px;
+	width: 118px;
 	height:40px;
 	background:#fafafa;
 }
 .shoptitle th:nth-child(4){
-	width: 190px;
+	width: 273px;
 	height:40px;
 	background:#fafafa;
 }
 .shoptitle th:nth-child(5){
-	width: 190px;
+	width: 78px;
 	height:40px;
 	background:#fafafa;
 }
 .shoptitle th:nth-child(6){
-	width: 190px;
+	width: 58px;
 	height:40px;
 	background:#fafafa;
     text-align:center;
 }
 .shoptitle td{
 	height:140px;
-	background:red;
+	background:#ffffff;
+	text-align:center;
+	font-size:12px;
+	color:#7f6666;
 }
+.shoptitle td:nth-child(2){
+	text-indent:30px;
+	text-align: left;
+}
+.goodsimgs img{
+	width:120px;
+	height:120px;
+	vertical-align: middle;
+}
+.goodsimgs span{
+	vertical-align: middle;
+}
+.addAndReduce>div{
+	width:134px;
+	height:28px;
+	border-top:1px solid #dfdfdf;
+	border-bottom:1px solid #dfdfdf;
+	display: flex;
+	margin:0 auto;
+}
+.addAndReduce>div span{
+	display: block;
+	width:28px;
+	height:28px;
+	line-height:28px;
+	background:#fafafa;
+	border-left:1px solid #dfdfdf;
+	border-right:1px solid #dfdfdf;
+}
+.goodsnum{
+	width:74px;
+	height:28px;
+	text-align: center;
+	outline: none;
+	border:0;
+}
+
 .shoptitle h3{
 	display:flex;
 }
-.shoptitle h3 a{
+.shoptitle h3 span{
 	font-size: 14px;
 	color: #9fa0a0;
 	margin:22px 6px 22px 30px;

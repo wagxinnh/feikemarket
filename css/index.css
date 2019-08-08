@@ -18,7 +18,6 @@ th {
 	margin: 0;
 	padding: 0;
 }
-
 a {
 	text-decoration: none;
 }
@@ -735,7 +734,6 @@ body {
 	position: absolute;
 	right: 0;
 	bottom: 0;
-	opacity: 0;
 }
 
 .havorbox p:nth-child(1) {
@@ -745,7 +743,7 @@ body {
 	margin-top: 4px;
 }
 
-.havorbox p:nth-child(1) {
+.havorbox p:nth-child(2) {
 	font-size: 11px;
 	color: #9ecdf0;
 	line-height: 23px;

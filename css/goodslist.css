@@ -21,7 +21,6 @@ th {
 a {
 	text-decoration: none;
 }
-
 ul,
 ol {
 	list-style: none;
@@ -304,7 +303,98 @@ body {
 	margin-top:20px;
 	font-weight: bold;
 }
+#goodslistcenter{
+	width:1139px;
+	padding-left:58px;
+	padding-right:44px;
+	margin:0 auto;
+	overflow: hidden;
+}
+.goodslistfoot{
+	width:1241px;
+	height:38px;
+	margin:10px auto;
+}
+.goodslistfoot .tatalnum{
+	float:left;
+	text-indent: 50px;
+	line-height:38px;
+}
+.goodslistfoot .go{
+	float:right;
+}
+.go span:nth-child(2){
+	margin-left:33px;
+}
+.go input[type="text"]{
+	width:32px;
+	height:23px;
+	margin-left:10px;
+}
+.go input[type="button"]{
+	width:60px;
+	height:23px;
+	margin-left:6px;
+}
+.goodslistinfo{
+	width:1241px;
+	margin:0 auto;
+}
+.infotitle{
+	width:1241px;
+	height:154px;
+	display:flex;
+}
 
+.infotitle span{
+	display:block;
+	width:468px;
+	height:84px;
+	border-bottom: 2px solid #e0e0e0;
+}
+.infotitle h3{
+	margin:0 90px;
+	line-height:154px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.infogoods{
+	width: 1241px;
+	height:363px;
+	margin:0 auto;	
+}
+.infogoods a{
+	float:left;
+	width:309px;
+	height:311px;
+	border:1px solid #dfdfdf;
+	border-right:none;
+	font-family: "Microsoft Yahei", sans-serif;
+}
+.infogoods a:last-child{
+	border-right:1px solid #dfdfdf;
+}
+.infogoods a img{
+	width:240px;
+	display:block;
+	margin:0 auto;
+	margin-top:6px;
+}
+.infogoods a div{
+	width:309px;
+	height:30px;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: center;
+}
+.infogoods a p{
+	width:309px;
+	height:22px;
+	line-height: 22px;
+	font-size: 13px;
+	color:#b4b4b4;
+	text-align: center;
+}
 .footmain {
 	width: 100%;
 	background: #fafafa;
